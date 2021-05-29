@@ -21,3 +21,6 @@ use App\Http\Controllers\homeController;
 
 route::get('/', [homeController::class, 'index']);
 route::get('/dosen', [dosenController::class, 'index']);
+Route::get('/index', function () {
+     return view('home');
+ });
