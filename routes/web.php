@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\dosenController;
-use App\Http\Controllers\homeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +13,6 @@ use App\Http\Controllers\homeController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-route::get('/', [homeController::class, 'index']);
-route::get('/dosen', [dosenController::class, 'index']);
-Route::get('/index', function () {
-     return view('home');
- });
+Route::get('/', function () {
+    return view('homepage\index');
+});
