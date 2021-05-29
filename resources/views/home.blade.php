@@ -52,46 +52,20 @@
                     </button>
 
                     <a class="navbar-brand" href="index.html">
-                    	<h1><img src="images/logo.png" alt="logo"></h1>
+                    	<h1><img src="https://rekreartive.com/wp-content/uploads/2019/04/Logo-SMA-PNG-Terbaru-Warna.png" width='100' alt="logo"></h1>
                     </a>
                     
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.html">Home</a></li>
-                        <li class="dropdown"><a href="#">Pages <i class="fa fa-angle-down"></i></a>
-                            <ul role="menu" class="sub-menu">
-                                <li><a href="aboutus.html">About</a></li>
-                                <li><a href="aboutus2.html">About 2</a></li>
-                                <li><a href="service.html">Services</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="contact.html">Contact us</a></li>
-                                <li><a href="contact2.html">Contact us 2</a></li>
-                                <li><a href="404.html">404 error</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                            </ul>
+                        <li class="dropdown"><a href="#">About Us</i></a>
                         </li>                    
-                        <li class="dropdown"><a href="blog.html">Blog <i class="fa fa-angle-down"></i></a>
-                            <ul role="menu" class="sub-menu">
-                                <li><a href="blog.html">Blog Default</a></li>
-                                <li><a href="blogtwo.html">Timeline Blog</a></li>
-                                <li><a href="blogone.html">2 Columns + Right Sidebar</a></li>
-                                <li><a href="blogthree.html">1 Column + Left Sidebar</a></li>
-                                <li><a href="blogfour.html">Blog Masonary</a></li>
-                                <li><a href="blogdetails.html">Blog Details</a></li>
-                            </ul>
+                        <li class="dropdown"><a href="blog.html">Akademik</i></a>
                         </li>
-                        <li class="dropdown"><a href="portfolio.html">Portfolio <i class="fa fa-angle-down"></i></a>
-                            <ul role="menu" class="sub-menu">
-                                <li><a href="portfolio.html">Portfolio Default</a></li>
-                                <li><a href="portfoliofour.html">Isotope 3 Columns + Right Sidebar</a></li>
-                                <li><a href="portfolioone.html">3 Columns + Right Sidebar</a></li>
-                                <li><a href="portfoliotwo.html">3 Columns + Left Sidebar</a></li>
-                                <li><a href="portfoliothree.html">2 Columns</a></li>
-                                <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                            </ul>
+                        <li class="dropdown"><a href="portfolio.html">Kesiswaan</i></a>
                         </li>                         
-                        <li><a href="shortcodes.html ">Shortcodes</a></li>                    
+                        <li><a href="shortcodes.html ">Fitur</a></li>                    
                     </ul>
                 </div>
                 <div class="search">
@@ -112,12 +86,12 @@
             <div class="row">
                 <div class="main-slider">
                     <div class="slide-text">
-                        <h1>We Are Creative Nerds</h1>
+                        <h1>SMA Harapan Bangsa</h1>
                         <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
                         <a href="#" class="btn btn-common">SIGN UP</a>
                     </div>
                     <img src="images/home/slider/hill.png" class="slider-hill" alt="slider image">
-                    <img src="images/home/slider/house.png" class="slider-house" alt="slider image">
+                    <img src="illustration-schools.png" width='400' class="slider-house" alt="slider image">
                     <img src="images/home/slider/sun.png" class="slider-sun" alt="slider image">
                     <img src="images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
                     <img src="images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
@@ -134,28 +108,28 @@
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="single-service">
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                            <img src="images/home/icon1.png" alt="">
+                            <img src="filza.jpg" alt="">
                         </div>
-                        <h2>Incredibly Responsive</h2>
-                        <p>Ground round tenderloin flank shank ribeye. Hamkevin meatball swine. Cow shankle beef sirloin chicken ground round.</p>
+                        <h2>Sipemalu Yang Riang</h2>
+                        <p>I'm On The Next Level.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
                     <div class="single-service">
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
-                            <img src="images/home/icon2.png" alt="">
+                            <img src="Ridah.jpeg" alt="">
                         </div>
-                        <h2>Superior Typography</h2>
-                        <p>Hamburger ribeye drumstick turkey, strip steak sausage ground round shank pastrami beef brisket pancetta venison.</p>
+                        <h2>Freaky Girl</h2>
+                        <p>Not Shy Not Me.</p>
                     </div>
                 </div>
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
                     <div class="single-service">
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
-                            <img src="images/home/icon3.png" alt="">
+                            <img src="pp.png" alt="">
                         </div>
-                        <h2>Swift Page Builder</h2>
-                        <p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>
+                        <h2>Mr. Tampan</h2>
+                        <p>Tamfan dan Berani</p>
                     </div>
                 </div>
             </div>
