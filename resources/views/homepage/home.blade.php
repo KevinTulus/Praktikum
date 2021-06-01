@@ -26,7 +26,7 @@
 
 <body>
 	<header id="header">      
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-sm-12 overflow">
                    <div class="social-icons pull-right">
@@ -40,7 +40,7 @@
                     </div> 
                 </div>
              </div>
-        </div>
+        </div> -->
         <div class="navbar navbar-inverse" role="banner">
             <div class="container">
                 <div class="navbar-header">
@@ -91,7 +91,7 @@
                         <a href="#" class="btn btn-common">SIGN UP</a>
                     </div>
                     <img src="images/home/slider/hill.png" class="slider-hill" alt="slider image">
-                    <img src="illustration-schools.png" width='400' class="slider-house" alt="slider image">
+                    <img src="gambar sekolah.png" class="slider-house" alt="slider image" style="width:400px">
                     <img src="images/home/slider/sun.png" class="slider-sun" alt="slider image">
                     <img src="images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
                     <img src="images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
