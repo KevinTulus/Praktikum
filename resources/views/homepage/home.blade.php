@@ -91,7 +91,7 @@
                         <a href="#" class="btn btn-common">SIGN UP</a>
                     </div>
                     <img src="images/home/slider/hill.png" class="slider-hill" alt="slider image">
-                    <img src="gambar sekolah.png" class="slider-house" alt="slider image" style="width:400px">
+                    <img src="images/foto/gambar sekolah.png" class="slider-house" alt="slider image" style="width:400px">
                     <img src="images/home/slider/sun.png" class="slider-sun" alt="slider image">
                     <img src="images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
                     <img src="images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
@@ -108,7 +108,7 @@
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="single-service">
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                            <img src="filza.jpg" alt="">
+                            <img src="images/foto/filza.jpg" alt="">
                         </div>
                         <h2>Sipemalu Yang Riang</h2>
                         <p>I'm On The Next Level.</p>
@@ -117,7 +117,7 @@
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
                     <div class="single-service">
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
-                            <img src="Ridah.jpeg" alt="">
+                            <img src="images/foto/Ridah.jpeg" alt="">
                         </div>
                         <h2>Freaky Girl</h2>
                         <p>Not Shy Not Me.</p>
@@ -126,7 +126,7 @@
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
                     <div class="single-service">
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
-                            <img src="pp.png" alt="">
+                            <img src="images/foto/pp.png" alt="">
                         </div>
                         <h2>Mr. Tampan</h2>
                         <p>Tamfan dan Berani</p>
