@@ -88,7 +88,7 @@
                     <div class="slide-text">
                         <h1>SMA Harapan Bangsa</h1>
                         <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
-                        <a href="#" class="btn btn-common">SIGN UP</a>
+                        <a href="{{'/about'}}" class="btn btn-common">SIGN UP</a>
                     </div>
                     <img src="images/home/slider/hill.png" class="slider-hill" alt="slider image">
                     <img src="images/foto/gambar sekolah.png" class="slider-house" alt="slider image" style="width:400px">
