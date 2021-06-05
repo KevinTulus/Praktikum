@@ -65,7 +65,8 @@
                         </li>
                         <li class="dropdown"><a href="portfolio.html">Kesiswaan</i></a>
                         </li>                         
-                        <li><a href="shortcodes.html ">Fitur</a></li>                    
+                        <li><a href="shortcodes.html ">Fitur</a></li>
+                        <li><a href="{{'/login'}}">Login</a></li>
                     </ul>
                 </div>
                 <div class="search">
