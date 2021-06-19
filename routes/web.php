@@ -21,6 +21,4 @@ Route::get('/about', function () {
     return view('homepage\aboutus');
 });
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
