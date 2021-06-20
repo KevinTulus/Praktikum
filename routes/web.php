@@ -13,13 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage\home');
-});
+//Homepage
+Route::view('/', 'homepage.index');
+Route::view('/tentang', 'homepage.tentang.tentang');
+Route::view('/berita', 'homepage.berita.berita');
+Route::view('/akademik', 'homepage.akademik.akademik');
+Route::view('/acara', 'homepage.acara.acara');
 
-Route::get('/about', function () {
-    return view('homepage\aboutus');
-});
-
+//Portal
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//??
 Route::get('/guru', [App\Http\Controllers\TeacherController::class, 'index'])->name('guru');

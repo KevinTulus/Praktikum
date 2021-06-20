@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Portal SMA Harapan Bangsa')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -14,7 +16,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                   <h1>Selamat Datang Di Portal SMA Harapan Bangsa</h1>
                 </div>
             </div>
         </div>
