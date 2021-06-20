@@ -74,9 +74,9 @@
     </header>
     <!--/#header-->
     <p class="container">Cari Data Guru :</p>
-    <form class="container" action="/guru/cari" method="GET">
-    	<input type="text" name="cari" placeholder="Cari Nama/NIP..." value="{{ old('cari') }}">
-    	<input type="submit" value="CARI">
+    <form class="container" action="{{route('guru')}}" method="GET">
+    	<input type="text" name="cari" placeholder="Cari Nama/NIP..." value="{{$request->cari}}">
+    	<button type="submit" class="btn btn-info ">Cari</button>
     </form>
 
     <section id="features">
@@ -94,11 +94,11 @@
                           </tr>
                         </thead>
                         <tbody>
-                          @foreach ($gurus as $guru)
+                            @foreach ($guru as $gurus)
                           <tr>
-                            <th scope="row">{{$guru->ni}}</th>
-                            <th scope="row">{{$guru->name}}</th>
-                            <th scope="row">{{$guru->email}}</th>
+                            <th scope="row">{{$gurus->ni}}</th>
+                            <th scope="row">{{$gurus->name}}</th>
+                            <th scope="row">{{$gurus->email}}</th>
                           </tr>
                           @endforeach
                         </tbody>
