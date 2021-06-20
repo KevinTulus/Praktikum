@@ -5,7 +5,7 @@ use app\Http\Controllers\TeacherController;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes  
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -14,14 +14,20 @@ use app\Http\Controllers\TeacherController;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage\home');
-});
+//Homepage
+Route::view('/', 'homepage.index');
+Route::view('/tentang', 'homepage.tentang.tentang');
+Route::view('/berita', 'homepage.berita.berita');
+Route::view('/akademik', 'homepage.akademik.akademik');
+Route::view('/acara', 'homepage.acara.acara');
 
-Route::get('/about', function () {
-    return view('homepage\aboutus');
-});
-
+//Portal
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+<<<<<<< HEAD
 Route::get('/guru', [App\Http\Controllers\TeacherController::class, 'index'])->name('guru');
 Route::get('/guru', 'TeacherController@search');
+=======
+
+//??
+Route::get('/guru', [App\Http\Controllers\TeacherController::class, 'index'])->name('guru');
+>>>>>>> 0cb17bcf7c1095a006a02c597f717df824ae594a
