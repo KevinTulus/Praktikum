@@ -22,3 +22,4 @@ Route::get('/about', function () {
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/guru', [App\Http\Controllers\TeacherController::class, 'index'])->name('guru');
