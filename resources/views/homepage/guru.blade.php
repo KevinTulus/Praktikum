@@ -73,9 +73,9 @@
         </div>
     </header>
     <!--/#header-->
-    <p style="center">Cari Data Guru :</p>
-    <form action="/guru/cari" method="GET">
-    	<input type="text" name="cari" placeholder="Cari Nama Guru .." value="{{ old('cari') }}">
+    <p class="container">Cari Data Guru :</p>
+    <form class="container" action="/guru/cari" method="GET">
+    	<input type="text" name="cari" placeholder="Cari Nama/NIP..." value="{{ old('cari') }}">
     	<input type="submit" value="CARI">
     </form>
 
@@ -84,19 +84,24 @@
             <div class="row">
                 <div class="single-features">
                     <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <table>
+
+                        <table class="table">
+                          <thead>
                           <tr>
-                            <th>NIP</th>
-                            <th>NAMA</th>
-                            <th>EMAIL</th>
+                            <th scope="col">NIP</th>
+                            <th scope="col">NAMA</th>
+                            <th scope="col">EMAIL</th>
                           </tr>
+                        </thead>
+                        <tbody>
                           @foreach ($gurus as $guru)
                           <tr>
-                            <th>{{$guru->ni}}</th>
-                            <th>{{$guru->name}}</th>
-                            <th>{{$guru->email}}</th>
+                            <th scope="row">{{$guru->ni}}</th>
+                            <th scope="row">{{$guru->name}}</th>
+                            <th scope="row">{{$guru->email}}</th>
                           </tr>
                           @endforeach
+                        </tbody>
                         </table>
                     </div>
                 </div>
