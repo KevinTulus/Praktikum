@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -230,25 +229,3 @@
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
-=======
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-<table class="table table-bordered">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">NIP</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach ($gurus as $guru)
-    <tr>
-        <th scope="row">{{$guru->ni}}</th>
-        <th scope="row">{{$guru->name}}</th>
-        <th scope="row">{{$guru->email}}</th>   
-    </tr>
-    @endforeach
-  </tbody>
-</table>
->>>>>>> 0cb17bcf7c1095a006a02c597f717df824ae594a
