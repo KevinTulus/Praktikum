@@ -7,7 +7,8 @@
             <div class="main-slider">
                 <div class="slide-text">
                     <h1>SMA Harapan Bangsa</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem deleniti praesentium aliquam, consequuntur quod quaerat. Perspiciatis eveniet molestiae voluptate esse, consequuntur, voluptatem odit aliquid debitis, temporibus voluptatibus reiciendis suscipit cupiditate.</p>
+                    <p>SMA Harapan Bangsa adalah sekolah ataupun instansi pendidikan yang didirikan guna membantu dan mengembangkan para siswa untuk menjadi pemimpin masa depan, menjadi sekolah bagi insan yang unggul dalam berbagai macam prestasi, dan juga membantu siswa untuk memiliki wawasan yang global.</p>
+                    <p>Para staf dan tenaga pendidik kami telah berkomitmen untuk memberdayakan siswa kami hingga mereka mencapai potensi maksimalnya. Hal ini didukung dengan fasilitas yang mumpuni, kami yakin SMA Harapan Bangsa adalah tempat yang terbaik untuk mempersiapkan generasi muda menjadi tenaga profesional nantinya.</p>
                     <a href="#" class="btn btn-common">Lihat Selengkapnya</a>
                 </div>
                 {{--<img src="images/home/slider/slide1/house.png" class="img-responsive slider-house" alt="slider image">
@@ -184,8 +185,10 @@
                 <div class="col-sm-12">
                     <div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
                         <p><img src="images/home/clients.png" class="img-responsive" alt=""></p>
+                        <div class="section-title">
                         <h1 class="title">Ekstrakurikuler</h1>
                         <p>Lihat ekstrakurikuler kami disini. </p>
+                        </div>
                     </div>
                     <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="col-xs-3 col-sm-2">

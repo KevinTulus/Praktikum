@@ -1,16 +1,11 @@
-<div class="app-wrapper-footer">
-    <div class="app-footer">
-        <div class="app-footer__inner">
-            <div class="app-footer-right">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="javascript:void(0);" class="nav-link">
-                            Made with &#9829; by Kelompok 1 
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<footer class="footer">
+        <div class=" container-fluid ">
+          <div class="copyright" id="copyright">
+            &copy; <script>
+              document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+            </script>, Kelompok 1</a>
+          </div>
         </div>
+      </footer>
     </div>
-</div>   
-</div>
+  </div>

@@ -1,24 +1,24 @@
 @include('portal.layout.head')
+
+<body class="">
+<div class="wrapper ">
+  
+@include('portal.layout.sidebar')
+  
+  <div class="main-panel" id="main-panel">
+
 @include('portal.layout.header')
 
-@include('portal.layout.sidebar')
-
-<div class="app-main__outer">
-    <div class="app-main__inner">
-        <div class="app-page-title">
-            <div class="page-title-wrapper">
-                <div class="page-title-heading">
-                    <div>
-                        @yield('title')
-                        <div class="page-title-subheading">
-                            @yield('subtitle')
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        @yield('content')
+    <div class="panel-header panel-header-sm">
     </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-md-12">
+          @yield('content')
+        </div>
+      </div>
+    </div>
+    
+  @include('portal.layout.footer')
 
-    @include('portal.layout.footer')
-    @include('portal.layout.foot')
+  @include('portal.layout.foot')

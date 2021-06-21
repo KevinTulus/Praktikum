@@ -1,5 +1,7 @@
 @extends('portal.layout.auth')
 
+@include('portal.layout.headauth')
+
 @section('content')
 <div class="container login vw-100">
     <div class="row vh-100 mt-4">

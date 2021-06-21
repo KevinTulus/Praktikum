@@ -1,0 +1,1 @@
+<link href="{{asset('assets_portal/main.css')}}" rel="stylesheet"/>

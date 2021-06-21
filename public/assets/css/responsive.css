@@ -87,7 +87,7 @@
     }
     #home-slider .slide-text {
         top: 0;
-        width: 50%;
+        width: 75%;
     }
     #home-slider h1 {
         margin-top: 0;
@@ -609,4 +609,5 @@
 	font-size:15px;
 	color:#888;
 	margin-top:15px;
+	text-align: center;
 }

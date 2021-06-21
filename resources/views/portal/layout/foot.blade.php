@@ -1,19 +1,17 @@
-</div>
-</div>
-<script type="text/javascript" src="{{ asset('assets_portal/assets/scripts/jquery-3.6.0.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets_portal/assets/scripts/popper.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets_portal/assets/bootstrap/js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets_portal/assets/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets_portal/assets/bootstrap-select/js/i18n/defaults-id_ID.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets_portal/assets/sweet-alert/sweetalert2.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets_portal/assets/summernote/summernote.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets_portal/assets/summernote/lang/summernote-id-ID.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets_portal/assets/datatables/datatables.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets_portal/assets/scripts/main.js') }}"></script>
-<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script type="text/javascript">
-
-@yield('script')
+<!--   Core JS Files   -->
+<script src="{{ asset('assets_portal/js/core/jquery.min.js')}}"></script>
+  <script src="{{ asset('assets_portal/js/core/popper.min.js')}}"></script>
+  <script src="{{ asset('assets_portal/js/core/bootstrap.min.js')}}"></script>
+  <script src="{{ asset('assets_portal/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="{{ asset('assets_portal/js/plugins/chartjs.min.js"')}}></script>
+  <!--  Notifications Plugin    -->
+  <script src="{{ asset('assets_portal/js/plugins/bootstrap-notify.js"')}}></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="{{ asset('assets_portal/js/now-ui-dashboard.min.js?v=1.5.0')}}" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  <script src="{{ asset('assets_portal/demo/demo.js')}}"></script>
 </body>
 
 </html>

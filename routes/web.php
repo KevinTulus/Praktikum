@@ -22,6 +22,9 @@ Route::view('/acara', 'homepage.acara.acara');
 
 //Portal
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::view('/dashbaord', 'portal.pages.dashbaord');
+Route::view('/table', 'portal.pages.table');
+Route::view('/profile', 'portal.pages.profile');
 
 //??
 Route::get('/guru', [App\Http\Controllers\TeacherController::class, 'index'])->name('guru');

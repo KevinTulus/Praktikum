@@ -1,62 +1,61 @@
-<div class="app-header header-shadow">
-    <div class="app-header__logo">
-        <div class="logo-src">
-            <img src="{{asset('assets/img/logo.png')}}" alt="logo-ikaman">
-        </div>
-        <div class="header__pane ml-auto">
-            <div>
-                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
-                    data-class="closed-sidebar">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent  bg-primary  navbar-absolute">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
             </div>
-        </div>
-    </div>
-    <div class="app-header__mobile-menu">
-        <div>
-            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-        </div>
-    </div>
-    <div class="app-header__menu">
-        <div class="app-header-right">
-            <div class="header-btn-lg pr-0">
-                <div class="widget-content p-0">
-                    <div class="widget-content-wrapper">
-                        <div class="widget-content-left">
-                            <div class="btn-group">
-                                <a role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                    <div class="avatar d-flex justify-content-center">
-                                        <img src="{{Auth::user()->photo_url}}" alt="foto-profil">
-                                    </div>
-                                    <i class="fa fa-angle-down ml-2 opacity-8"></i>
-                                </a>
-                                <div tabindex="0" role="menu"
-                                    class="dropdown-menu dropdown-menu-right">
-                                    <a href="{{url('portal/profil')}}" class="dropdown-item">Profil</a>
-                                    <button onclick="$('form#logout').submit()" type="button" tabindex="0" class="dropdown-item">Logout</button>
-                                    <form id="logout" class="d-none" action="{{url('portal/logout')}}" method="POST">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="widget-content-left  ml-3 header-user-info">
-                            <div class="widget-heading">
-                                {{Auth::user()->name}}
-                            </div>
-                            <div class="widget-subheading">
-                                {{Auth::user()->role->name}}
-                            </div>
-                        </div>
-                    </div>
+            <a class="navbar-brand" href="#pablo">@yield('subtitle')</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <form>
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="now-ui-icons ui-1_zoom-bold"></i>
+                  </div>
                 </div>
-            </div>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url('/profile')}}">
+                  <i class="now-ui-icons users_single-02"></i>
+                  <p>
+                    {{ Auth::user()->name }}
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="now-ui-icons media-1_button-power"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Aksi</span>
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        {{ __('Keluar') }}
+                  </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
-</div>
+      </nav>
+      <!-- End Navbar -->
