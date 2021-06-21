@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\TeacherController;
+use app\Http\Controllers\GuruController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +20,9 @@ Route::view('/tentang', 'homepage.tentang.tentang');
 Route::view('/berita', 'homepage.berita.berita');
 Route::view('/akademik', 'homepage.akademik.akademik');
 Route::view('/acara', 'homepage.acara.acara');
+route::view('/guru', 'homepage.admin.guru');
 
 //Portal
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/guru', [App\Http\Controllers\TeacherController::class, 'index'])->name('guru');
-Route::get('/guru', 'TeacherController@search');
+Route::get('/guru', [App\Http\Controllers\GuruController::class, 'index'])->name('guru');
+Route::get('/guru/search',[App\Http\Controllers\GuruController::class, 'search']);
