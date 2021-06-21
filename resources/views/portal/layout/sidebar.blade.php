@@ -16,7 +16,7 @@
             </a>
           </li>
           <li class="@yield('classdashboard')">
-            <a href="{{ url('/dashbaord')}}">
+            <a href="{{ url('/dashboard')}}">
               <i class="now-ui-icons design_app"></i>
               <p>Dasbor</p>
             </a>

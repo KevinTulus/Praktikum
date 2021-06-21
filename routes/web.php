@@ -24,14 +24,10 @@ route::view('/guru', 'homepage.admin.guru');
 
 //Portal
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-<<<<<<< HEAD
-Route::view('/dashbaord', 'portal.pages.dashbaord');
-Route::view('/table', 'portal.pages.table');
-Route::view('/profile', 'portal.pages.profile');
-
-//??
-Route::get('/guru', [App\Http\Controllers\TeacherController::class, 'index'])->name('guru');
-=======
 Route::get('/guru', [App\Http\Controllers\GuruController::class, 'index'])->name('guru');
 Route::get('/guru/search',[App\Http\Controllers\GuruController::class, 'search']);
->>>>>>> 42a0534139f89640f20a433ac2b71f23e157bbb1
+
+//Portal++
+Route::view('/dashboard', 'portal.pages.dashboard');
+Route::view('/table', 'portal.pages.table');
+Route::view('/profile', 'portal.pages.profile');
