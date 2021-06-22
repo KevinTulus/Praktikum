@@ -17,13 +17,15 @@ class JobSeeder extends Seeder
         $jobs = [];
         $date = date("Y-m-d H:i:s");
 
-        for($i = 1; $i <= 14; $i++)
+        for($i = 1; $i <= 42; $i++)
         {
-            $k = 1 + $i;
+            if($i <= 14) {$j = $i;}
+            elseif ($i >= 15 && $i <=28) {$j = $i-14;}
+            else {$j = $i-28;}
 
             $jobs[] = [
                 'course_id' => $i,
-                'teacher_id' => $k,
+                'teacher_id' => $j,
                 'created_at' => $date,
                 'updated_at' => $date,
             ];

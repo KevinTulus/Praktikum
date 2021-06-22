@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Faker\Factory;
 
 class UserSeeder extends Seeder
 {
@@ -17,7 +16,6 @@ class UserSeeder extends Seeder
         \DB::statement('SET FOREIGN_KEY_CHECKS=0');
         \DB::table('users')->truncate();
         $users = [];
-        $faker = Factory::create();
         $date = date("Y-m-d H:i:s");
 
         \DB::table('users')->insert([

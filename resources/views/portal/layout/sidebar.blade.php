@@ -27,18 +27,40 @@
               <p>Profile Pengguna</p>
             </a>
           </li>
+          @if(auth()->id() == 1)
           <li class="@yield('classtable')"> 
-            <a href="{{ url('/table')}}">
+            <a href="{{ route('student.index') }}">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Tabel</p>
+              <p>Student</p>
             </a>
           </li>
-          <li class="@yield('class')">
-            <a href="./typography.html">
-              <i class="now-ui-icons text_caps-small"></i>
-              <p>Posting</p>
+          <li class="@yield('classtable')"> 
+            <a href="{{ route('teacher.index') }}">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Teacher</p>
             </a>
           </li>
+          <li class="@yield('classtable')"> 
+            <a href="{{ route('job.index')}}">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Job</p>
+            </a>
+          </li>
+          <li class="@yield('classtable')"> 
+            <a href="{{ route('post.index') }}">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Post</p>
+            </a>
+          </li>
+          @endif
+          @if(auth()->id() <= 15)
+          <li class="@yield('classtable')"> 
+            <a href="{{ route('nilai.index') }}">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Nilai</p>
+            </a>
+          </li>
+          @endif
         </ul>
       </div>
     </div>

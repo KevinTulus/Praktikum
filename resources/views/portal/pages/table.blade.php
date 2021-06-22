@@ -7,82 +7,60 @@
 @section('content')
 <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Tabel</h4>
+                <h4 class="card-title"> Data Student</h4>
               </div>
+
+              @if ($message = Session::get('success'))
+              <div class="alert alert-success">
+                  <p>{{ $message }}</p>
+              </div>
+              @endif
+
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table">
                     <thead class=" text-primary">
                       <th>
+                        No.
+                      </th>
+                      <th>
+                        NIS
+                      </th>
+                      <th>
                         Nama
                       </th>
-                      <th>
-                        Negara
-                      </th>
-                      <th>
-                        Kota
+                      <th class="text-right">
+                        Email
                       </th>
                       <th class="text-right">
-                        Gaji
+                        Aksi
                       </th>
                     </thead>
                     <tbody>
+                    @foreach ($users as $user)
                       <tr>
                         <td>
-                          Dakota Rice
+                          {{++$i}}
                         </td>
                         <td>
-                          Niger
+                          {{$user->ni}}
                         </td>
                         <td>
-                          Oud-Turnhout
+                          {{$user->name}}
                         </td>
                         <td class="text-right">
-                          $36,738
+                          {{$user->email}}
+                        </td>
+                        <td>
+                          <form action="{{ route('student.destroy', $user->id) }}" method="POST">
+                            <a class="btn btn-primary btn-sm" href="{{ route('student.edit',$user->id) }}">Edit</a>
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                          </form>
                         </td>
                       </tr>
-                      <tr>
-                        <td>
-                          Minerva Hooper
-                        </td>
-                        <td>
-                          Curaçao
-                        </td>
-                        <td>
-                          Sinaai-Waas
-                        </td>
-                        <td class="text-right">
-                          $23,789
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Sage Rodriguez
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          Baileux
-                        </td>
-                        <td class="text-right">
-                          $56,142
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Philip Chaney
-                        </td>
-                        <td>
-                          Korea, South
-                        </td>
-                        <td>
-                          Overland Park
-                        </td>
-                        <td class="text-right">
-                          $38,735
-                        </td>
-                      </tr>
+                      @endforeach
                     </tbody>
                   </table>
                 </div>

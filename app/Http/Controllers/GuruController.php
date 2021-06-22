@@ -15,12 +15,6 @@ class GuruController extends Controller
       	$gurus = user::where('role', 2)->get();
         return view('homepage.admin.guru', compact('gurus'));
 
-		// if($request){
-		// 		$guru = user::where('role', 2)->get();
-		// }else{
-		// 		$guru = user::where('name', 'like', '%'.$request->keyword.'%')->get();
-		// }
-    //
   }
 
     public function search(Request $request){
@@ -30,25 +24,3 @@ class GuruController extends Controller
     }
 
 }
-//     		// mengambil data dari table pegawai
-//     $guru = DB::table('User')->paginate(10);
-//     $gurus = U\users::where('role', 2)->get();
-//     		// mengirim data pegawai ke view index
-//     return view('homepage.guru',compact('gurus'));
-// // 	}
-//
-// 	public function cari(Request $request)
-// 	{
-// 		// menangkap data pencarian
-// 		$cari = $request->cari;
-//
-//     		// mengambil data dari table pegawai sesuai pencarian data
-// 		$gurus = DB::table('users')
-// 		->where('name','like',"%".$cari."%")
-// 		->paginate();
-//
-//     		// mengirim data pegawai ke view index
-// 		return view('homepage.guru',compact('gurus'));
-//
-// 	}
-//

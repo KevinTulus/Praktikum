@@ -18,7 +18,7 @@ class CreateJobsTable extends Migration
             $table->unsignedBigInteger('course_id');
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('restrict');
             $table->unsignedBigInteger('teacher_id');
-            $table->foreign('teacher_id')->references('id')->on('teachers')->onDelete('restrict');
+            $table->foreign('teacher_id')->references('id')->on('teachers')->onDelete('cascade');
             $table->timestamps();
         });
     }
