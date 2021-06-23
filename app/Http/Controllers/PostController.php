@@ -16,7 +16,7 @@ class PostController extends Controller
     {
         $this->authorize('viewAny', Post::class);
         $posts = Post::paginate(10);
-        return view('admin.post.index', compact('posts'))->with('i', (request()->input('page', 1) - 1) * 10);
+        return view('portal.pages.post.index', compact('posts'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
@@ -26,7 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.post.create');
+        return view('portal.pages.post.create');
     }
 
     /**
@@ -65,7 +65,7 @@ class PostController extends Controller
     public function show($id)
     {
         $posts = Post::where('id', $id)->first();
-        return view('admin.post.show',compact('posts'));
+        return view('portal.pages.post.show',compact('posts'));
     }
 
     /**
@@ -77,7 +77,7 @@ class PostController extends Controller
     public function edit($id)
     {
         $posts = Post::where('id', $id)->first();
-        return view('admin.post.edit',compact('posts'));
+        return view('portal.pages.post.edit',compact('posts'));
     }
 
     /**

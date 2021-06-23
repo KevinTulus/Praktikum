@@ -50,7 +50,7 @@ class NilaiController extends Controller
 
         //$lessons->dd();
         
-        return view('admin.nilai.index', compact('students', 'lessons'));
+        return view('portal.pages.nilai.index', compact('students', 'lessons'));
     }
 
     /**
@@ -95,7 +95,7 @@ class NilaiController extends Controller
     {
         $jobs = Job::all();
         $students = Student::where('id', $id)->first();
-        return view('admin.nilai.edit',compact('students', 'jobs'));//
+        return view('portal.pages.nilai.edit',compact('students', 'jobs'));//
     }
 
     /**

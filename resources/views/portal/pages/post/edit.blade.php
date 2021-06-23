@@ -1,16 +1,17 @@
+
 @extends('portal.layout.app')
 
-@section('subtitle', 'Manajemen Siswa')
+@section('subtitle', 'Manajemen Berita')
 
-@section('studentclass', 'active')
+@section('newsclass', 'active')
 
 @section('content')
 <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Tambahkan Siswa Baru</h4>
+                <h4 class="card-title"> Ubah Berita</h4>
               </div>
               <div class="float-right">
-                    <a class="btn btn-secondary" href="{{ route('student.index') }}"> Back</a>
+                    <a class="btn btn-secondary" href="{{ route('post.index') }}"> Back</a>
                 </div>
                 <br>
 
@@ -27,68 +28,55 @@
 
               <div class="card-body">
                 <div class="table-responsive">
-                <form action="{{ route('student.store') }}" method="POST">
+                <form action="{{ route('post.update', $posts->id) }}" method="POST">
                 @csrf
+                @method('PUT')
                   <table class="table">
                     <tbody>
                       <tr>
                         <td>
-                          NIS
+                          Judul
                         </td>
                         <td>
-                          <input type="text" name="ni" class="form-control" placeholder="ni">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Nama
-                        </td>
-                        <td>
-                          <input type="text" name="name" class="form-control" placeholder="name">
+                            <input type="text" name="title" value="{{ $posts->title }}" class="form-control" placeholder="title">
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          Email
+                          Slug 
                         </td>
                         <td>
-                          <input type="email" name="email" class="form-control" placeholder="email">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Kelas
-                        </td>
-                        <td>
-                            <select id="kelas" name="kelas">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
+                            <input type="text" name="slug" value="{{ $posts->slug }}" class="form-control" placeholder="slug">
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          Password
+                          Kutipan
                         </td>
                         <td>
-                        <input type="password" name="password" class="form-control" placeholder="password">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Konfirmasi Password
-                        </td>
-                        <td>
-                        <input type="password" name="password_confirmation" class="form-control" placeholder="password">
+                            <input type="text" name="excerpt" value="{{ $posts->excerpt }}" class="form-control" placeholder="excerpt">
                         </td>
                       </tr>
                       <tr>
                         <td>
-                        
+                          Isi
                         </td>
                         <td>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                            <input type="text" name="body" value="{{ $posts->body }}" class="form-control" placeholder="body">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Gambar
+                        </td>
+                        <td>
+                            <input type="text" name="image" value="{{ $posts->image }}" class="form-control" placeholder="image">
+                        </td>
+                      </tr>
+                      </tr>
+                      <tr>
+                        <td>
+                            <button type="submit" class="btn btn-primary">Update</button>
                         </td>
                       </tr>
                     </tbody>

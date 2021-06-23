@@ -1,13 +1,13 @@
 @extends('portal.layout.app')
 
-@section('subtitle', 'Tabel')
+@section('subtitle', 'Manajemen Siswa')
 
-@section('classtable', 'active')
+@section('studentclass', 'active')
 
 @section('content')
 <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Data Student</h4>
+                <h4 class="card-title"> Data Siswa</h4>
               </div>
 
               <div class="row">
@@ -76,3 +76,4 @@
               </div>
             </div>
       @endsection
+

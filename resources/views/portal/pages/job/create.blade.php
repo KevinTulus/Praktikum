@@ -1,13 +1,13 @@
 @extends('portal.layout.app')
 
-@section('subtitle', 'Tabel')
+@section('subtitle', 'Manajemen Bidang Studi Guru')
 
-@section('classtable', 'active')
+@section('jobclass', 'active')
 
 @section('content')
 <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Tambahkan Job Baru</h4>
+                <h4 class="card-title"> Tambahkan Pembagian Bidang Studi Baru</h4>
               </div>
               <div class="float-right">
                     <a class="btn btn-secondary" href="{{ route('job.index') }}"> Back</a>

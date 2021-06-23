@@ -1,8 +1,8 @@
 @extends('portal.layout.app')
 
-@section('subtitle', 'Tabel')
+@section('subtitle', 'Manajemen Siswa')
 
-@section('classtable', 'active')
+@section('studentclass', 'active')
 
 @section('content')
 <div class="card">

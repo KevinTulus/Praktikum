@@ -1,19 +1,19 @@
 @extends('portal.layout.app')
 
-@section('subtitle', 'Manajemen Bidang Studi Guru')
+@section('subtitle', 'Manajemen Berita')
 
-@section('jobclass', 'active')
+@section('newsclass', 'active')
 
 @section('content')
 <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Data Bidang Studi Guru</h4>
+                <h4 class="card-title"> Data Berita</h4>
               </div>
 
               <div class="row">
                   <div class="col-lg-12 margin-tb">
                       <div class="pull-right">
-                          <a class="btn btn-success" href="{{ route('job.create') }}">Tambah BIdang Bidang Studi Guru</a>
+                          <a class="btn btn-success" href="{{ route('post.create') }}">Tambah Berita Baru</a>
                       </div>
                   </div>
               </div>
@@ -32,46 +32,44 @@
                         No.
                       </th>
                       <th>
-                        Mata Pelajaran
+                        Judul
                       </th>
                       <th>
-                        Kelas
-                      </th>
-                      <th>
-                        Guru
+                        Slug
                       </th>
                       <th >
                         Aksi
                       </th>
                     </thead>
                     <tbody>
-                    @foreach ($jobs as $job)
+                    @foreach ($posts as $post)
                       <tr>
                         <td>
                           {{++$i}}
                         </td>
                         <td>
-                          {{$job->course->course_name}}
+                            {{$post->title}}
                         </td>
                         <td>
-                          {{$job->course->kelas}}
+                            {{$post->title}}
                         </td>
                         <td>
-                          {{$job->teacher->user->name}}
+                            {{$post->slug}}
                         </td>
                         <td>
-                          <form action="{{ route('job.destroy', $job->id) }}" method="POST">
-                            <a class="btn btn-primary btn-sm" href="{{ route('job.edit',$job->id) }}">Edit</a>
+                        <form action="{{ route('post.destroy', $post->id) }}" method="POST">
+                            <a class="btn btn-info btn-sm" href="{{ route('post.show',$post->id) }}">Show</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('post.edit',$post->id) }}">Edit</a>
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
-                          </form>
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus berita ini?')">Delete</button>
+                        </form>
                         </td>
                       </tr>
                       @endforeach
                     </tbody>
                   </table>
-                  {!! $jobs->links() !!}
+                  {!! $posts->links() !!}
                 </div>
               </div>
             </div>

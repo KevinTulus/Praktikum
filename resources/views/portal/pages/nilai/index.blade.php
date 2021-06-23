@@ -1,21 +1,13 @@
 @extends('portal.layout.app')
 
-@section('subtitle', 'Manajemen Bidang Studi Guru')
+@section('subtitle', 'Manajemen Nilai Siswa')
 
-@section('jobclass', 'active')
+@section('taskclass', 'active')
 
 @section('content')
 <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Data Bidang Studi Guru</h4>
-              </div>
-
-              <div class="row">
-                  <div class="col-lg-12 margin-tb">
-                      <div class="pull-right">
-                          <a class="btn btn-success" href="{{ route('job.create') }}">Tambah BIdang Bidang Studi Guru</a>
-                      </div>
-                  </div>
+                <h4 class="card-title"> Data Nilai Siswa</h4>
               </div>
               
               @if ($message = Session::get('success'))
@@ -32,46 +24,59 @@
                         No.
                       </th>
                       <th>
-                        Mata Pelajaran
+                        Siswa
                       </th>
                       <th>
                         Kelas
                       </th>
                       <th>
-                        Guru
+                        Mata Pelajaran
+                      </th>
+                      <th>
+                        Nilai
                       </th>
                       <th >
                         Aksi
                       </th>
                     </thead>
                     <tbody>
-                    @foreach ($jobs as $job)
+
+                    <?php 
+                        $i=0;
+                        if($i <= 10) {$j = 1;}
+                        elseif ($i >= 11 && $i <=20) {$j = 2;}
+                        elseif ($i >= 21 && $i <=30) {$j = 3;}
+                        elseif ($i >= 31 && $i <=40) {$j = 4;}
+                        elseif ($i >= 41 && $i <=50) {$j = 5;}
+                        else {$j = 6;}
+                        $pelajaran = $lessons[$j];
+                    ?>
+
+
+                    @foreach ($students as $student)
                       <tr>
                         <td>
                           {{++$i}}
                         </td>
                         <td>
-                          {{$job->course->course_name}}
+                            {{ $student->user->name }}
                         </td>
                         <td>
-                          {{$job->course->kelas}}
+                            {{ $student->kelas }}
                         </td>
                         <td>
-                          {{$job->teacher->user->name}}
+                            {{ $pelajaran }}
                         </td>
                         <td>
-                          <form action="{{ route('job.destroy', $job->id) }}" method="POST">
-                            <a class="btn btn-primary btn-sm" href="{{ route('job.edit',$job->id) }}">Edit</a>
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
-                          </form>
+                            {{ $student->$pelajaran }}
+                        </td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="{{ route('nilai.edit',$student->id) }}">Edit</a>
                         </td>
                       </tr>
                       @endforeach
                     </tbody>
                   </table>
-                  {!! $jobs->links() !!}
                 </div>
               </div>
             </div>

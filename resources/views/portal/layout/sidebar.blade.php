@@ -24,39 +24,38 @@
           <li class="@yield('classprofile')"> 
             <a href="{{ url('/profile')}}">
               <i class="now-ui-icons users_single-02"></i>
-              <p>Profile Pengguna</p>
+              <p>Profil Pengguna</p>
             </a>
           </li>
           @if(auth()->id() == 1)
-          <li class="@yield('classtable')"> 
+          <li class="@yield('studentclass')"> 
             <a href="{{ route('student.index') }}">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Student</p>
+              <i class="now-ui-icons education_hat"></i>
+              <p>Siswa</p>
             </a>
           </li>
-          <li class="@yield('classtable')"> 
+          <li class="@yield('teacherclass')"> 
             <a href="{{ route('teacher.index') }}">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Teacher</p>
+              <i class="now-ui-icons business_badge"></i>
+              <p>Guru</p>
             </a>
           </li>
-          <li class="@yield('classtable')"> 
+          <li class="@yield('jobclass')"> 
             <a href="{{ route('job.index')}}">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Job</p>
+              <i class="now-ui-icons education_paper"></i>
+              <p>Bidang Studi</p>
             </a>
           </li>
-          <li class="@yield('classtable')"> 
+          <li class="@yield('newsclass')"> 
             <a href="{{ route('post.index') }}">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Post</p>
+              <i class="now-ui-icons text_caps-small"></i>
+              <p>Berita</p>
             </a>
           </li>
-          @endif
-          @if(auth()->id() <= 15)
-          <li class="@yield('classtable')"> 
+          @elseif(auth()->id() <= 15)
+          <li class="@yield('taskclass')"> 
             <a href="{{ route('nilai.index') }}">
-              <i class="now-ui-icons design_bullet-list-67"></i>
+              <i class="now-ui-icons education_agenda-bookmark"></i>
               <p>Nilai</p>
             </a>
           </li>

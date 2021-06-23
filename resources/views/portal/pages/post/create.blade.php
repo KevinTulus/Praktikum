@@ -1,13 +1,14 @@
+
 @extends('portal.layout.app')
 
-@section('subtitle', 'Manajemen Siswa')
+@section('subtitle', 'Manajemen Berita')
 
-@section('studentclass', 'active')
+@section('newsclass', 'active')
 
 @section('content')
 <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Tambahkan Siswa Baru</h4>
+                <h4 class="card-title"> Tambahkan Berita Baru</h4>
               </div>
               <div class="float-right">
                     <a class="btn btn-secondary" href="{{ route('student.index') }}"> Back</a>
@@ -27,60 +28,48 @@
 
               <div class="card-body">
                 <div class="table-responsive">
-                <form action="{{ route('student.store') }}" method="POST">
+                <form action="{{ route('post.store') }}" method="POST">
                 @csrf
                   <table class="table">
                     <tbody>
                       <tr>
                         <td>
-                          NIS
+                          Judul :
                         </td>
                         <td>
-                          <input type="text" name="ni" class="form-control" placeholder="ni">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Nama
-                        </td>
-                        <td>
-                          <input type="text" name="name" class="form-control" placeholder="name">
+                          <input type="text" name="title" class="form-control" placeholder="Isi Judul Berita">
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          Email
+                          Slug :
                         </td>
                         <td>
-                          <input type="email" name="email" class="form-control" placeholder="email">
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Kelas
-                        </td>
-                        <td>
-                            <select id="kelas" name="kelas">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
+                          <input type="text" name="slug" class="form-control" placeholder="Slug">
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          Password
+                          Kutipan :
                         </td>
                         <td>
-                        <input type="password" name="password" class="form-control" placeholder="password">
+                          <input type="text" name="excerpt" class="form-control" placeholder="Kutipan">
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          Konfirmasi Password
+                          Isi :
                         </td>
                         <td>
-                        <input type="password" name="password_confirmation" class="form-control" placeholder="password">
+                          <input type="text" name="body" class="form-control" placeholder="Isi Berita">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Gambar :
+                        </td>
+                        <td>
+                          <input type="text" name="image" class="form-control" placeholder="Masukkan Gambar">
                         </td>
                       </tr>
                       <tr>
@@ -88,7 +77,7 @@
                         
                         </td>
                         <td>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Posting</button>
                         </td>
                       </tr>
                     </tbody>
