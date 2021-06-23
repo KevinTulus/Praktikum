@@ -37,7 +37,13 @@
                       <th>
                         Slug
                       </th>
-                      <th >
+                      <th>
+                        Kutipan
+                      </th>
+                      <th>
+                        Isi :
+                      </th>
+                      <th>
                         Aksi
                       </th>
                     </thead>
@@ -51,10 +57,14 @@
                             {{$post->title}}
                         </td>
                         <td>
-                            {{$post->title}}
+                            {{$post->slug}}
+                        </td>
+                            {{$post->excerpt}}
+                        <td>
+                            {{$post->body}}
                         </td>
                         <td>
-                            {{$post->slug}}
+                            {{$post->image}}
                         </td>
                         <td>
                         <form action="{{ route('post.destroy', $post->id) }}" method="POST">
