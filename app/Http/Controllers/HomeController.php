@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('portal.layout.app');
+        return view('portal.pages.dashboard');
     }
 }
