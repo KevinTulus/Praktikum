@@ -41,7 +41,7 @@
                         Kutipan
                       </th>
                       <th>
-                        Isi :
+                        Isi 
                       </th>
                       <th>
                         Aksi
