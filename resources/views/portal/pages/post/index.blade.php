@@ -59,7 +59,9 @@
                         <td>
                             {{$post->slug}}
                         </td>
+                        <td>
                             {{$post->excerpt}}
+                        </td>
                         <td>
                             {{$post->body}}
                         </td>

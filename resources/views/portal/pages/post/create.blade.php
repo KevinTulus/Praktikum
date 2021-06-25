@@ -11,7 +11,7 @@
                 <h4 class="card-title"> Tambahkan Berita Baru</h4>
               </div>
               <div class="float-right">
-                    <a class="btn btn-secondary" href="{{ route('student.index') }}"> Back</a>
+                    <a class="btn btn-secondary" href="{{ route('post.index') }}"> Back</a>
                 </div>
                 <br>
 
