@@ -22,5 +22,5 @@ class GuruController extends Controller
         $gurus = DB::table('users')->where('name','LIKE',"%".$search."%")->paginate(1);
         return view('homepage.admin.guru',compact('gurus'));
     }
-
+// ini guru controller
 }
